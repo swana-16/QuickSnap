@@ -43,6 +43,24 @@ namespace CardGames
  }
  }
 
+public void PlayerHit (int player)
+ {
+ //TODO: consider deducting score for miss hits???
+ if ( player >= 0 && player < _score.Length && // …
+ IsStarted && // …
+ _topCards[0] != null &&
+ _topCards[0].Rank == _topCards [1].Rank) // …
+ {
+ _score[player]++;
+ }
+ else if ( player >= 0 && player < _score.Length)
+ {
+ _score[player]--;
+ }
+ // stop the game...
+ _started = false;
+ }
+ 
 		/// <summary>
 		/// Draws the game to the Window.
 		/// </summary>
