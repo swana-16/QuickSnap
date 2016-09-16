@@ -40,6 +40,7 @@ namespace CardGames
  {
  myGame.PlayerHit (1);
  }
+ } 
  }
  }
 
